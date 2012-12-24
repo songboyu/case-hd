@@ -27,7 +27,6 @@ Source: "E:\project\Case05_4\Case05_4\bin\Debug\login.exe"; DestDir: "{app}"; Fl
 Source: "E:\project\Case05_4\Case05_4\bin\Debug\Case05_4.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "E:\project\Case05_4\Case05_4\bin\Debug\Case05_4.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 Source: "E:\project\Case05_4\Case05_4\bin\Debug\login.exe"; DestDir: "{app}"; Flags: ignoreversion
-; 注意: 不要在任何共享系统文件上使用“Flags: ignoreversion”
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

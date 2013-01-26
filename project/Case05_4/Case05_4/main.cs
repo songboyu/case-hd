@@ -55,14 +55,7 @@ namespace Case05_4
             this.Dispose();
         }
 
-        private void infoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.infoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.病历信息DataSet);
-
-        }
-
+      
         private void main_Load(object sender, EventArgs e)
         {
             string newName = "Case05_4.Properties.Settings.病历信息ConnectionString";

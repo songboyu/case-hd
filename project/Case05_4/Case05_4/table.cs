@@ -14,11 +14,12 @@ namespace Case05_4
         public table(string path , int sign = 0)
         {
             InitializeComponent();
-            pictureBox1.ImageLocation = path;
+            this.panel1.BackgroundImage = Image.FromFile(path);
+            //pictureBox1.ImageLocation = path;
             if (sign == 1)
             {
                 this.WindowState = FormWindowState.Maximized;
-                this.pictureBox1.Dock = DockStyle.Fill;
+                this.panel1.Dock = DockStyle.Fill;
                 this.button1.Location = new Point(Screen.PrimaryScreen.Bounds.Width-this.button1.Width,0);
             }
         }
@@ -27,5 +28,21 @@ namespace Case05_4
         {
             this.Close();
         }
+
+        private void table_Shown(object sender, EventArgs e)
+        {
+            this.panel1.Focus();
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.ForeColor = Color.LightGray;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.ForeColor = Color.Gray;
+        }
+
     }
 }

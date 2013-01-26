@@ -20,9 +20,9 @@ namespace Case05_4
         {
             if (textBox1.Text == "123")
             {
-                Form4 form = new Form4(true);
+                Form5 form = new Form5();
                 this.Close();
-                form.Show();
+                form.ShowDialog();
                 
             }
             else

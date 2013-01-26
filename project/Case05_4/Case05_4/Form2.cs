@@ -28,7 +28,7 @@ namespace Case05_4
         private string str;
         private string picName;
         private string mpgName;
-        private string Current = Directory.GetCurrentDirectory();
+        private string Current = AppDomain.CurrentDomain.BaseDirectory;
 
         public Form2(string name, string time)
         {

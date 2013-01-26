@@ -68,6 +68,7 @@
             this.ClientSize = new System.Drawing.Size(728, 340);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.listView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "镜检录像与图片";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "镜检录像与图片";

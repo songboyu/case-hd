@@ -6,24 +6,31 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Case05_4
 {
     public partial class load : Form
     {
-       
+
+        private string Current = AppDomain.CurrentDomain.BaseDirectory;
+        ini ini;
         public load()
         {
-            
             InitializeComponent();
-            // TODO: 这行代码将数据加载到表“病历信息DataSet.info”中。您可以根据需要移动或删除它。
+           
+            ini = new ini(Current + "\\config.ini");
+            label1.Text = ini.ReadValue("Setting", "mainTitle");
+            label2.Text = ini.ReadValue("Setting", "subTitle");
+            pictureBox1.ImageLocation = ini.ReadValue("Setting", "ico");
+
             try
             {
                 this.infoTableAdapter.Fill(this.病历信息DataSet.info);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("密码输入错误！！", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message, "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();
             }
         }
@@ -35,6 +42,33 @@ namespace Case05_4
             this.timer1.Interval = 100;
             this.timer1.Enabled = true;
             this.timer1.Start();
+
+            string newName = "Case05_4.Properties.Settings.病历信息ConnectionString";
+            string newConString = "Data Source=localhost;Initial Catalog= ;User ID= ;Password=  ;";
+            string nowpath = "Case05_4.exe.config";
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(nowpath);
+
+            //MessageBox.Show(newConString);
+
+            XmlNode node = doc.SelectSingleNode("//connectionStrings");//获取connectionStrings节点
+            try
+            {
+                XmlElement element = (XmlElement)node.SelectSingleNode("//add[@name='" + newName + "']");
+                if (element != null)
+                {
+                    //存在更新子节点
+                    element.SetAttribute("connectionString", newConString);
+
+                }
+                doc.Save(nowpath);
+            }
+
+            catch (InvalidCastException ex)
+            {
+                throw ex;
+            }
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -49,8 +83,8 @@ namespace Case05_4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form5 info = new Form5();
-            info.ShowDialog();
+            Form4 form = new Form4();
+            form.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -61,8 +95,12 @@ namespace Case05_4
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form4 form = new Form4();
-            form.Show();
+            Form7 form = new Form7();
+            form.ShowDialog();
+            
+            label1.Text = ini.ReadValue("Setting", "mainTitle");
+            label2.Text = ini.ReadValue("Setting", "subTitle");
+            pictureBox1.ImageLocation = ini.ReadValue("Setting", "ico");
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -83,61 +121,21 @@ namespace Case05_4
             }
         }
 
-        private void button1_MouseEnter(object sender, EventArgs e)
+        private void buttonMouseEnter(object sender, EventArgs e)
         {
-           
-            this.button1.FlatAppearance.BorderSize = 1;
+            Button s = (Button)sender;
+            s.FlatAppearance.BorderSize = 1;
         }
 
-        private void button1_MouseLeave(object sender, EventArgs e)
+        private void buttonMouseLeave(object sender, EventArgs e)
         {
-            this.button1.FlatAppearance.BorderSize = 0;
-        }
-        private void button2_MouseEnter(object sender, EventArgs e)
-        {
-
-            this.button2.FlatAppearance.BorderSize = 1;
+            Button s = (Button)sender;
+            s.FlatAppearance.BorderSize = 0;
         }
 
-        private void button2_MouseLeave(object sender, EventArgs e)
+        private void load_Shown(object sender, EventArgs e)
         {
-            this.button2.FlatAppearance.BorderSize = 0;
-        }
-        private void button3_MouseEnter(object sender, EventArgs e)
-        {
-
-            this.button3.FlatAppearance.BorderSize = 1;
-        }
-
-        private void button3_MouseLeave(object sender, EventArgs e)
-        {
-            this.button3.FlatAppearance.BorderSize = 0;
-        }
-        private void button4_MouseEnter(object sender, EventArgs e)
-        {
-
-            this.button4.FlatAppearance.BorderSize = 1;
-        }
-
-        private void button4_MouseLeave(object sender, EventArgs e)
-        {
-            this.button4.FlatAppearance.BorderSize = 0;
-        }
-
-        private void infoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.infoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.病历信息DataSet);
-
-        }
-
-        private void infoBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.infoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.病历信息DataSet);
-
+            this.label1.Focus();
         }
     }
 }

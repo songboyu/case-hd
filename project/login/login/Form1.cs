@@ -16,6 +16,7 @@ namespace login
         public Form1()
         {
             InitializeComponent();
+            skinEngine1.SkinFile = "DeepCyan.ssk";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,5 +52,7 @@ namespace login
 
             this.Dispose();
         }
+
+       
     }
 }

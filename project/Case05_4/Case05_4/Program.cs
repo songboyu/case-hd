@@ -15,7 +15,7 @@ namespace Case05_4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new main());
+            Application.Run(new load());
         }
     }
 }

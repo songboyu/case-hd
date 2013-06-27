@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form1>
+  <panelEx1>
+    <textBox19 Text="" Top="287" Left="133" Width="599" Height="21" />
+    <label35 Text="联系地址：" Top="287" Left="62" Width="65" Height="12" />
+    <textBox21 Text="" Top="260" Left="132" Width="147" Height="21" />
+    <label36 Text="联系电话：" Top="263" Left="62" Width="65" Height="12" />
+    <textBox22 Text="" Top="260" Left="368" Width="364" Height="21" />
+    <label37 Text="工作单位：" Top="263" Left="297" Width="65" Height="12" />
+    <comboBox10 Text="" Top="901" Left="460" Width="280" Height="20" />
+    <label32 Text="HP &amp;&amp; HIV：" Top="904" Left="391" Width="65" Height="12" />
+    <comboBox7 Text="" Top="-875" Left="-460" Width="0" Height="0" />
+    <label34 Text="设备型号：" Top="-878" Left="-391" Width="0" Height="0" />
+    <textBox20 Text="" Top="803" Left="392" Width="348" Height="47" />
+    <label33 Text="术后诊断：" Top="788" Left="391" Width="65" Height="12" />
+    <comboBox6 Text="b" Top="1072" Left="621" Width="117" Height="20" />
+    <label31 Text="病理诊断医师：" Top="1076" Left="535" Width="89" Height="12" />
+    <textBox18 Text="" Top="790" Left="63" Width="294" Height="21" />
+    <label30 Text="病理标本编码：" Top="772" Left="63" Width="89" Height="12" />
+    <textBox17 Text="" Top="843" Left="65" Width="293" Height="82" />
+    <label29 Text="病理诊断：" Top="828" Left="64" Width="65" Height="12" />
+    <textBox16 Text="" Top="733" Left="64" Width="293" Height="24" />
+    <label28 Text="活检标本数量：" Top="718" Left="61" Width="89" Height="12" />
+    <textBox15 Text="" Top="678" Left="64" Width="293" Height="24" />
+    <label27 Text="活检部位：" Top="663" Left="63" Width="65" Height="12" />
+    <pictureBox4 Text="" Top="681" Left="569" Width="172" Height="97" />
+    <pictureBox3 Text="" Top="681" Left="393" Width="172" Height="97" />
+    <pictureBox2 Text="" Top="578" Left="569" Width="172" Height="97" />
+    <pictureBox1 Text="" Top="578" Left="393" Width="172" Height="97" />
+    <comboBox5 Text="b" Top="407" Left="636" Width="104" Height="20" />
+    <label26 Text="内窥镜操作医师：" Top="410" Left="529" Width="101" Height="12" />
+    <comboBox4 Text="b" Top="407" Left="408" Width="89" Height="20" />
+    <label25 Text="申请医师：" Top="410" Left="337" Width="65" Height="12" />
+    <textBox14 Text="" Top="978" Left="63" Width="674" Height="73" />
+    <label24 Text="建议：" Top="956" Left="63" Width="41" Height="12" />
+    <label23 Text="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" Top="937" Left="62" Width="677" Height="12" />
+    <textBox13 Text="" Top="578" Left="63" Width="293" Height="70" />
+    <label22 Text="镜检诊断：" Top="563" Left="62" Width="65" Height="12" />
+    <label21 Text="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" Top="540" Left="61" Width="677" Height="12" />
+    <textBox12 Text="" Top="481" Left="63" Width="675" Height="56" />
+    <label20 Text="镜检所见：" Top="466" Left="61" Width="65" Height="12" />
+    <label19 Text="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" Top="440" Left="62" Width="677" Height="12" />
+    <textBox11 Text="" Top="368" Left="132" Width="606" Height="21" />
+    <label18 Text="临床诊断：" Top="371" Left="61" Width="65" Height="12" />
+    <textBox10 Text="" Top="341" Left="132" Width="606" Height="21" />
+    <label17 Text="病人主诉：" Top="344" Left="61" Width="65" Height="12" />
+<textBox9 Text="" Top="227" Left="663" Width="78" Height="21" />
+    <label16 Text="床位号：" Top="233" Left="603" Width="53" Height="12" />
+    <textBox8 Text="" Top="230" Left="531" Width="66" Height="21" />
+    <label15 Text="病区号：" Top="233" Left="472" Width="53" Height="12" />
+    <textBox7 Text="" Top="230" Left="405" Width="61" Height="21" />
+    <label14 Text="住院号：" Top="233" Left="346" Width="53" Height="12" />
+    <textBox6 Text="" Top="230" Left="271" Width="69" Height="21" />
+    <label13 Text="门诊号：" Top="233" Left="212" Width="53" Height="12" />
+    <textBox5 Text="" Top="227" Left="132" Width="66" Height="21" />
+    <label12 Text="检查号：" Top="233" Left="73" Width="53" Height="12" />
+    <label11 Text="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" Top="323" Left="61" Width="677" Height="12" />
+    <textBox23 Text="" Top="201" Left="662" Width="78" Height="20" />
+    <label10 Text="科  室：" Top="204" Left="603" Width="53" Height="12" />
+    <comboBox2 Text="" Top="200" Left="531" Width="66" Height="20" />
+    <label9 Text="初复诊：" Top="203" Left="472" Width="53" Height="12" />
+    <textBox4 Text="" Top="201" Left="405" Width="61" Height="21" />
+    <label8 Text="年  龄：" Top="204" Left="346" Width="53" Height="12" />
+    <comboBox1 Text="" Top="200" Left="272" Width="68" Height="20" />
+    <label7 Text="性  别：" Top="203" Left="212" Width="53" Height="12" />
+    <textBox3 Text="" Top="200" Left="132" Width="66" Height="21" />
+    <label6 Text="姓  名：" Top="204" Left="73" Width="53" Height="12" />
+    <label5 Text="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" Top="180" Left="61" Width="677" Height="12" />
+    <textBox2 Text="" Top="156" Left="574" Width="164" Height="21" />
+    <label4 Text="检查时间：" Top="159" Left="503" Width="65" Height="12" />
+    <textBox1 Text="" Top="156" Left="132" Width="164" Height="21" />
+    <label3 Text="检查部位：" Top="159" Left="62" Width="65" Height="12" />
+    <label2 Text="肠镜信息报告单" Top="105" Left="339" Width="149" Height="20" />
+    <label1 Text="哈尔滨医科大学附属第三医院" Top="41" Left="220" Width="390" Height="29" />
+    <pictureBox5 Text="" Top="22" Left="47" Width="112" Height="102" image="" />
+  </panelEx1>
+</Form1>

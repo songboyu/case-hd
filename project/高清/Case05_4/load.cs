@@ -22,6 +22,7 @@ namespace Case05_4
             verifySignature();
             connectDB();
             InitializeComponent();
+            
             ini = new ini(Current + "\\config.ini");
             label1.Text = ini.ReadValue("Setting", "mainTitle");
             label2.Text = ini.ReadValue("Setting", "subTitle");
@@ -77,13 +78,70 @@ namespace Case05_4
                 throw ex;
             }
         }
+        public Boolean CheckDataPath()
+        {
+            String dirPath = ini.ReadValue("Setting", "table");
+            DirectoryInfo dirInfo = new DirectoryInfo(dirPath);
+            Console.WriteLine(GetFreeSpace(dirInfo.Root.Name));
+            if (!dirInfo.Exists)
+            {
+                MessageBox.Show("报告储存路径不存在，请进入系统设置更改路径", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            else if (GetFreeSpace(dirInfo.Root.Name) < 5000000000)
+            {
+                MessageBox.Show("图片与视频储存磁盘空间不足5G，请进入系统设置更改路径", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            return true;
+
+        }
+        public Boolean CheckTablePath()
+        {
+            String dirPath = ini.ReadValue("Setting", "table");
+            DirectoryInfo dirInfo = new DirectoryInfo(dirPath);
+            Console.WriteLine(GetFreeSpace(dirInfo.Root.Name));
+            if(!dirInfo.Exists)
+            {
+                MessageBox.Show("报告储存路径不存在，请进入系统设置更改路径", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            else if (GetFreeSpace(dirInfo.Root.Name) < 5000000000)
+            {
+                MessageBox.Show("报告储存磁盘空间不足5G，请进入系统设置更改路径", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            return true;
+
+        }
+        private static ulong GetFreeSpace(string driveDirectoryName)
+        {
+            ulong freefreeBytesAvailable = 0;
+
+            DriveInfo drive = new DriveInfo(driveDirectoryName);
+
+            freefreeBytesAvailable = (ulong)drive.AvailableFreeSpace;
+
+            return freefreeBytesAvailable;
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.Opacity += 0.1;//当透明变为不透明
             if (this.Opacity >= 1)//当完全不透明时再由不透明变为透明
             {
                 this.timer1.Stop();
-
+                if (!CheckTablePath() || !CheckDataPath())
+                {
+                    button1.Enabled = false;
+                    button2.Enabled = false;
+                    button5.Enabled = false;
+                }
+                else
+                {
+                    button1.Enabled = true;
+                    button2.Enabled = true;
+                    button5.Enabled = true;
+                }
             }
 
         }
@@ -105,6 +163,18 @@ namespace Case05_4
             MyPassword form = new MyPassword();
             form.ShowDialog();
 
+            if (!CheckTablePath() || !CheckDataPath())
+            {
+                button1.Enabled = false;
+                button2.Enabled = false;
+                button5.Enabled = false;
+            }
+            else
+            {
+                button1.Enabled = true;
+                button2.Enabled = true;
+                button5.Enabled = true;
+            }
             label1.Text = ini.ReadValue("Setting", "mainTitle");
             label2.Text = ini.ReadValue("Setting", "subTitle");
             pictureBox1.ImageLocation = ini.ReadValue("Setting", "ico");
@@ -117,6 +187,11 @@ namespace Case05_4
             timer2.Start();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DoctorsInfo form = new DoctorsInfo();
+            form.ShowDialog();
+        }
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (this.Opacity > 0)
@@ -201,10 +276,6 @@ namespace Case05_4
             login.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            DoctorsInfo form = new DoctorsInfo();
-            form.ShowDialog();
-        }
+        
     }
 }

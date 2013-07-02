@@ -37,3 +37,7 @@ C:\Users\scralwor\Desktop\最终版temp2\高清\Case05_4\WindowsFormsControlLibr
 C:\Users\scralwor\Desktop\最终版temp2\高清\Case05_4\WindowsFormsControlLibrary1\obj\Release\ResolveAssemblyReference.cache
 C:\Users\scralwor\Desktop\最终版temp2\高清\Case05_4\WindowsFormsControlLibrary1\obj\Release\WindowsFormsControlLibrary1.dll
 C:\Users\scralwor\Desktop\最终版temp2\高清\Case05_4\WindowsFormsControlLibrary1\obj\Release\WindowsFormsControlLibrary1.pdb
+C:\Users\songboyu\Documents\GitHub\case-hd\project\高清\Case05_4\WindowsFormsControlLibrary1\bin\Release\WindowsFormsControlLibrary1.dll
+C:\Users\songboyu\Documents\GitHub\case-hd\project\高清\Case05_4\WindowsFormsControlLibrary1\bin\Release\WindowsFormsControlLibrary1.pdb
+C:\Users\songboyu\Documents\GitHub\case-hd\project\高清\Case05_4\WindowsFormsControlLibrary1\obj\Release\WindowsFormsControlLibrary1.dll
+C:\Users\songboyu\Documents\GitHub\case-hd\project\高清\Case05_4\WindowsFormsControlLibrary1\obj\Release\WindowsFormsControlLibrary1.pdb

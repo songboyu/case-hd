@@ -28,3 +28,7 @@ K:\最终版\标清\Case05_4\WindowsFormsControlLibrary1\bin\Debug\WindowsFormsC
 K:\最终版\标清\Case05_4\WindowsFormsControlLibrary1\obj\Debug\ResolveAssemblyReference.cache
 K:\最终版\标清\Case05_4\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.dll
 K:\最终版\标清\Case05_4\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.pdb
+C:\Users\songboyu\Documents\GitHub\case-hd\project\标清\Case05_4\WindowsFormsControlLibrary1\bin\Debug\WindowsFormsControlLibrary1.dll
+C:\Users\songboyu\Documents\GitHub\case-hd\project\标清\Case05_4\WindowsFormsControlLibrary1\bin\Debug\WindowsFormsControlLibrary1.pdb
+C:\Users\songboyu\Documents\GitHub\case-hd\project\标清\Case05_4\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.dll
+C:\Users\songboyu\Documents\GitHub\case-hd\project\标清\Case05_4\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.pdb

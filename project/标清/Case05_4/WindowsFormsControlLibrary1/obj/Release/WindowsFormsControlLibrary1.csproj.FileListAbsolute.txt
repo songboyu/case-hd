@@ -42,3 +42,7 @@ C:\Users\songboyu\Desktop\最终版temp\标清\Case05_4\WindowsFormsControlLibra
 C:\Users\songboyu\Desktop\最终版temp\标清\Case05_4\WindowsFormsControlLibrary1\bin\Release\WindowsFormsControlLibrary1.pdb
 C:\Users\songboyu\Desktop\最终版temp\标清\Case05_4\WindowsFormsControlLibrary1\obj\Release\WindowsFormsControlLibrary1.dll
 C:\Users\songboyu\Desktop\最终版temp\标清\Case05_4\WindowsFormsControlLibrary1\obj\Release\WindowsFormsControlLibrary1.pdb
+C:\Users\songboyu\Documents\GitHub\case-hd\project\标清\Case05_4\WindowsFormsControlLibrary1\bin\Release\WindowsFormsControlLibrary1.dll
+C:\Users\songboyu\Documents\GitHub\case-hd\project\标清\Case05_4\WindowsFormsControlLibrary1\bin\Release\WindowsFormsControlLibrary1.pdb
+C:\Users\songboyu\Documents\GitHub\case-hd\project\标清\Case05_4\WindowsFormsControlLibrary1\obj\Release\WindowsFormsControlLibrary1.dll
+C:\Users\songboyu\Documents\GitHub\case-hd\project\标清\Case05_4\WindowsFormsControlLibrary1\obj\Release\WindowsFormsControlLibrary1.pdb

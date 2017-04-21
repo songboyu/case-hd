@@ -3,7 +3,7 @@
 
 #define MyAppName "高清视频采集系统"
 #define MyAppVersion "1.5"
-#define MyAppPublisher "耿彪&&宋博宇"
+#define MyAppPublisher "耿彪&宋博宇"
 #define MyAppURL "blog.csdn.net/scrawlor"
 #define MyAppExeName "Case05_4.exe"
 
@@ -11,7 +11,7 @@
 ; 注: AppId的值为单独标识该应用程序。
 ; 不要为其他安装程序使用相同的AppId值。
 ; (生成新的GUID，点击 工具|在IDE中生成GUID。)
-AppId={{C75844D5-E0D5-441D-A4FC-483BE792DA7C}
+AppId={{27A2D9CC-CE59-474B-B50C-8C7FCFB1E68B}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -23,8 +23,8 @@ DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
 OutputDir=C:\Users\scralwor\Desktop
-OutputBaseFilename=高清视频采集系统升级版安装程序
-SetupIconFile=C:\Users\scralwor\Desktop\医疗器械相关软件\1.5版源代码\高清\Case05_4\Login.ico
+OutputBaseFilename=高清视频采集系统安装程序
+SetupIconFile=C:\Users\scralwor\Documents\GitHub\case-hd\project\高清\Case05_4\Login.ico
 Compression=lzma
 SolidCompression=yes
 
@@ -37,8 +37,8 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\scralwor\Desktop\医疗器械相关软件\1.5版源代码\高清\Case05_4\bin\Release\Case05_4.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\scralwor\Desktop\医疗器械相关软件\1.5版源代码\高清\Case05_4\bin\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\Users\scralwor\Documents\GitHub\case-hd\project\高清\Case05_4\bin\Release\Case05_4.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\scralwor\Documents\GitHub\case-hd\project\高清\Case05_4\bin\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; 注意: 不要在任何共享系统文件上使用“Flags: ignoreversion”
 
 [Icons]

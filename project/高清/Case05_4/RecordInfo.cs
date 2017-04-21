@@ -85,9 +85,18 @@ namespace Case05_4
             //DataGridViewRow i = infoDataGridView.CurrentRow;
             DataRowView SelectedRowView = (DataRowView)this.infoBindingSource.Current;
             病历信息DataSet.infoRow selectedRow = (病历信息DataSet.infoRow)SelectedRowView.Row;
+            if (File.Exists(selectedRow._Table))
+            {
+                //存在文件  
+                MyImage form = new MyImage(selectedRow._Table);
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show("该病例信息已经被删除或转移，无法打开", "信息", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            MyImage form = new MyImage(selectedRow._Table);
-            form.Show();
+            }
+            
         }
 
         private void textBox_姓名_TextChanged(object sender, EventArgs e)

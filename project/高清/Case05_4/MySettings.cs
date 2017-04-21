@@ -29,7 +29,6 @@ namespace Case05_4
             textBox5.Text = ini.ReadValue("Setting", "ico");
             textBox6.Text = ini.ReadValue("Setting", "backImage");
             textBox6.ReadOnly = true;
-            averDeviceType.Text = ini.ReadValue("Setting", "averDeviceType");
             cbxPortName.Text = ini.ReadValue("Setting", "serialPortName");
             AddSerialPort();
 
@@ -70,17 +69,6 @@ namespace Case05_4
             {
                 MessageBox.Show("您没有选择脚踏开关的COM接口,脚踏开关设备可能无法正常使用", "视频采集系统", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (averDeviceType.SelectedItem != null)
-            {
-                ini.Writue("Setting", "averDeviceType", averDeviceType.SelectedItem.ToString());
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("您没有选择视频的制式,图像采集设备可能无法正常使用", "视频采集系统", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            
         }
 
         private void button5_Click(object sender, EventArgs e)

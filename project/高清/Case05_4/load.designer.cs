@@ -48,9 +48,13 @@
             this.infoTableAdapter = new Case05_4.病历信息DataSetTableAdapters.infoTableAdapter();
             this.tableAdapterManager = new Case05_4.病历信息DataSetTableAdapters.TableAdapterManager();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.allSpace = new System.Windows.Forms.Label();
+            this.freeSpace = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.病历信息DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoBindingSource)).BeginInit();
@@ -151,6 +155,10 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.freeSpace);
+            this.groupBox1.Controls.Add(this.allSpace);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.label6);
@@ -164,7 +172,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Location = new System.Drawing.Point(267, 545);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(509, 162);
+            this.groupBox1.Size = new System.Drawing.Size(509, 187);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "功能";
@@ -274,6 +282,15 @@
             this.panel1.Size = new System.Drawing.Size(1036, 780);
             this.panel1.TabIndex = 10;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(64, 160);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 12);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "磁盘总容量：";
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -312,6 +329,32 @@
             this.label1.Size = new System.Drawing.Size(661, 55);
             this.label1.TabIndex = 12;
             this.label1.Text = "哈尔滨医科大学附属第三医院";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(290, 160);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 12);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "磁盘可用容量：";
+            // 
+            // allSpace
+            // 
+            this.allSpace.AutoSize = true;
+            this.allSpace.Location = new System.Drawing.Point(148, 160);
+            this.allSpace.Name = "allSpace";
+            this.allSpace.Size = new System.Drawing.Size(11, 12);
+            this.allSpace.TabIndex = 18;
+            this.allSpace.Text = " ";
+            // 
+            // freeSpace
+            // 
+            this.freeSpace.AutoSize = true;
+            this.freeSpace.Location = new System.Drawing.Point(385, 160);
+            this.freeSpace.Name = "freeSpace";
+            this.freeSpace.Size = new System.Drawing.Size(0, 12);
+            this.freeSpace.TabIndex = 19;
             // 
             // load
             // 
@@ -365,5 +408,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label freeSpace;
+        private System.Windows.Forms.Label allSpace;
     }
 }

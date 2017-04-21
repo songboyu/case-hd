@@ -7,24 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
+using System.IO;
 
 namespace Case05_4
 {
     public partial class MyImage : Form
     {
         private string path;
-        public MyImage(string ImagePath , int sign = 0)
+        public MyImage(string ImagePath, int sign = 0)
         {
             InitializeComponent();
+
             path = ImagePath;
             this.panel1.BackgroundImage = Image.FromFile(path);
-            //pictureBox1.ImageLocation = path;
             if (sign == 1)
             {
                 this.WindowState = FormWindowState.Maximized;
                 this.panel1.Dock = DockStyle.Fill;
                 this.button2.Visible = false;
-                this.button1.Location = new Point(Screen.PrimaryScreen.Bounds.Width-this.button1.Width,0);
+                this.button1.Location = new Point(Screen.PrimaryScreen.Bounds.Width - this.button1.Width, 0);
             }
         }
 
@@ -60,7 +61,7 @@ namespace Case05_4
             //Image p = Image.FromFile(path);
             //e.Graphics.DrawImage(p, 0, 0);
             int dot = path.IndexOf(".");
-            string xmlPath = path.Substring(0,dot)+".bak";
+            string xmlPath = path.Substring(0, dot) + ".bak";
             //MessageBox.Show(xmlPath);
             XmlDocument doc = new XmlDocument();
             doc.Load(xmlPath);

@@ -38,5 +38,10 @@ namespace Case05_4
         {
             this.Close();
         }
+
+        private void MyPassword_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

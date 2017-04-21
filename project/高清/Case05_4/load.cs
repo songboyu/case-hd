@@ -16,7 +16,7 @@ namespace Case05_4
     public partial class load : Form
     {
         private string Current = AppDomain.CurrentDomain.BaseDirectory;
-        ini ini;
+        private ini ini;
         public load()
         {
             verifySignature();
@@ -80,18 +80,33 @@ namespace Case05_4
         }
         public Boolean CheckDataPath()
         {
-            String dirPath = ini.ReadValue("Setting", "table");
+            String dirPath = ini.ReadValue("Setting", "data");
             DirectoryInfo dirInfo = new DirectoryInfo(dirPath);
-            Console.WriteLine(GetFreeSpace(dirInfo.Root.Name));
+            //Console.WriteLine(GetFreeSpace(dirInfo.Root.Name));
+
             if (!dirInfo.Exists)
             {
-                MessageBox.Show("报告储存路径不存在，请进入系统设置更改路径", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("图片与视频储存路径不存在，请进入系统设置更改路径", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                allSpace.ForeColor = Color.Red;
+                freeSpace.ForeColor = Color.Red;
+                allSpace.Text = "未找到路径";
+                freeSpace.Text = "未找到路径";
                 return false;
             }
-            else if (GetFreeSpace(dirInfo.Root.Name) < 5000000000)
+            else if (GetFreeSpace(dirInfo.Root.Name) < 5)
             {
-                MessageBox.Show("图片与视频储存磁盘空间不足5G，请进入系统设置更改路径", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("图片与视频储存磁盘空间不足5G，请注意清理磁盘空间", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                freeSpace.ForeColor = Color.Red;
+                allSpace.Text = getAllSpace(dirInfo.Root.Name).ToString() + "G";
+                freeSpace.Text = GetFreeSpace(dirInfo.Root.Name).ToString() + "G";
                 return false;
+            }
+            else
+            {
+                allSpace.ForeColor = Color.White;
+                freeSpace.ForeColor = Color.White;
+                allSpace.Text = getAllSpace(dirInfo.Root.Name).ToString() + "G";
+                freeSpace.Text = GetFreeSpace(dirInfo.Root.Name).ToString() + "G";
             }
             return true;
 
@@ -100,15 +115,14 @@ namespace Case05_4
         {
             String dirPath = ini.ReadValue("Setting", "table");
             DirectoryInfo dirInfo = new DirectoryInfo(dirPath);
-            Console.WriteLine(GetFreeSpace(dirInfo.Root.Name));
+            //Console.WriteLine(GetFreeSpace(dirInfo.Root.Name));
             if(!dirInfo.Exists)
             {
                 MessageBox.Show("报告储存路径不存在，请进入系统设置更改路径", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-            else if (GetFreeSpace(dirInfo.Root.Name) < 5000000000)
-            {
-                MessageBox.Show("报告储存磁盘空间不足5G，请进入系统设置更改路径", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                allSpace.ForeColor = Color.Red;
+                freeSpace.ForeColor = Color.Red;
+                allSpace.Text = "未找到路径";
+                freeSpace.Text = "未找到路径";
                 return false;
             }
             return true;
@@ -117,12 +131,32 @@ namespace Case05_4
         private static ulong GetFreeSpace(string driveDirectoryName)
         {
             ulong freefreeBytesAvailable = 0;
-
-            DriveInfo drive = new DriveInfo(driveDirectoryName);
-
-            freefreeBytesAvailable = (ulong)drive.AvailableFreeSpace;
-
+            try
+            {
+                DriveInfo drive = new DriveInfo(driveDirectoryName);
+                freefreeBytesAvailable = (ulong)drive.AvailableFreeSpace / 1073741824;
+            }
+            catch (Exception e)
+            {
+            }
+            
             return freefreeBytesAvailable;
+        }
+        /**
+         *获取磁盘的总空间
+         **/
+        private static ulong getAllSpace(string driveDirectoryName)
+        {
+            ulong allBytesAvailable = 0;
+            try
+            {
+                DriveInfo drive = new DriveInfo(driveDirectoryName);
+                allBytesAvailable = (ulong)drive.TotalSize / 1073741824;
+            }
+            catch (Exception e)
+            {
+            }
+            return allBytesAvailable;
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -130,18 +164,8 @@ namespace Case05_4
             if (this.Opacity >= 1)//当完全不透明时再由不透明变为透明
             {
                 this.timer1.Stop();
-                if (!CheckTablePath() || !CheckDataPath())
-                {
-                    button1.Enabled = false;
-                    button2.Enabled = false;
-                    button5.Enabled = false;
-                }
-                else
-                {
-                    button1.Enabled = true;
-                    button2.Enabled = true;
-                    button5.Enabled = true;
-                }
+                CheckTablePath();
+                CheckDataPath();
             }
 
         }
@@ -163,18 +187,9 @@ namespace Case05_4
             MyPassword form = new MyPassword();
             form.ShowDialog();
 
-            if (!CheckTablePath() || !CheckDataPath())
-            {
-                button1.Enabled = false;
-                button2.Enabled = false;
-                button5.Enabled = false;
-            }
-            else
-            {
-                button1.Enabled = true;
-                button2.Enabled = true;
-                button5.Enabled = true;
-            }
+            CheckTablePath();
+            CheckDataPath();
+            
             label1.Text = ini.ReadValue("Setting", "mainTitle");
             label2.Text = ini.ReadValue("Setting", "subTitle");
             pictureBox1.ImageLocation = ini.ReadValue("Setting", "ico");

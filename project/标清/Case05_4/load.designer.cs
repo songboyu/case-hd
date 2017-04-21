@@ -51,6 +51,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.freeSpace = new System.Windows.Forms.Label();
+            this.allSpace = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.病历信息DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoBindingSource)).BeginInit();
@@ -151,6 +155,10 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.freeSpace);
+            this.groupBox1.Controls.Add(this.allSpace);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.label6);
@@ -164,7 +172,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Location = new System.Drawing.Point(267, 545);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(509, 162);
+            this.groupBox1.Size = new System.Drawing.Size(509, 177);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "功能";
@@ -313,6 +321,41 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "哈尔滨医科大学附属第三医院";
             // 
+            // freeSpace
+            // 
+            this.freeSpace.AutoSize = true;
+            this.freeSpace.Location = new System.Drawing.Point(401, 150);
+            this.freeSpace.Name = "freeSpace";
+            this.freeSpace.Size = new System.Drawing.Size(0, 12);
+            this.freeSpace.TabIndex = 23;
+            // 
+            // allSpace
+            // 
+            this.allSpace.AutoSize = true;
+            this.allSpace.Location = new System.Drawing.Point(164, 150);
+            this.allSpace.Name = "allSpace";
+            this.allSpace.Size = new System.Drawing.Size(11, 12);
+            this.allSpace.TabIndex = 22;
+            this.allSpace.Text = " ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(306, 150);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 12);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "磁盘可用容量：";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(80, 150);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 12);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "磁盘总容量：";
+            // 
             // load
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -365,5 +408,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label freeSpace;
+        private System.Windows.Forms.Label allSpace;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }
